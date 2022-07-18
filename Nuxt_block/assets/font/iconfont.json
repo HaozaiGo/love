@@ -1,0 +1,205 @@
+{
+  "id": "1363795",
+  "name": "travel",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "项目图标",
+  "glyphs": [
+    {
+      "icon_id": "15838432",
+      "name": "browse",
+      "font_class": "browse",
+      "unicode": "e666",
+      "unicode_decimal": 58982
+    },
+    {
+      "icon_id": "15838474",
+      "name": "favorite",
+      "font_class": "favorite",
+      "unicode": "e66f",
+      "unicode_decimal": 58991
+    },
+    {
+      "icon_id": "15838501",
+      "name": "menu",
+      "font_class": "menu",
+      "unicode": "e677",
+      "unicode_decimal": 58999
+    },
+    {
+      "icon_id": "15838506",
+      "name": "notification",
+      "font_class": "notification",
+      "unicode": "e679",
+      "unicode_decimal": 59001
+    },
+    {
+      "icon_id": "15838511",
+      "name": "play",
+      "font_class": "play",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "15838523",
+      "name": "pin",
+      "font_class": "pin",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "15838593",
+      "name": "favorite-filling",
+      "font_class": "favorite-filling",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "21395630",
+      "name": "邀请",
+      "font_class": "yaoqing",
+      "unicode": "f505",
+      "unicode_decimal": 62725
+    },
+    {
+      "icon_id": "21395631",
+      "name": "已读邮件",
+      "font_class": "yiduyoujian",
+      "unicode": "f506",
+      "unicode_decimal": 62726
+    },
+    {
+      "icon_id": "21395677",
+      "name": "资讯",
+      "font_class": "zixun",
+      "unicode": "f50e",
+      "unicode_decimal": 62734
+    },
+    {
+      "icon_id": "21395678",
+      "name": "组队",
+      "font_class": "zudui",
+      "unicode": "f50f",
+      "unicode_decimal": 62735
+    },
+    {
+      "icon_id": "21815631",
+      "name": "余额",
+      "font_class": "yue",
+      "unicode": "f59a",
+      "unicode_decimal": 62874
+    },
+    {
+      "icon_id": "21815632",
+      "name": "相册",
+      "font_class": "daichuli",
+      "unicode": "f59b",
+      "unicode_decimal": 62875
+    },
+    {
+      "icon_id": "21815661",
+      "name": "抵扣券",
+      "font_class": "dikouquan",
+      "unicode": "f59d",
+      "unicode_decimal": 62877
+    },
+    {
+      "icon_id": "21816362",
+      "name": "资讯",
+      "font_class": "zixun1",
+      "unicode": "f5bc",
+      "unicode_decimal": 62908
+    },
+    {
+      "icon_id": "21816720",
+      "name": "饮料",
+      "font_class": "yinliao",
+      "unicode": "f5cf",
+      "unicode_decimal": 62927
+    },
+    {
+      "icon_id": "21816757",
+      "name": "摄像头",
+      "font_class": "shexiangtou",
+      "unicode": "f5d2",
+      "unicode_decimal": 62930
+    },
+    {
+      "icon_id": "21816759",
+      "name": "影音",
+      "font_class": "yingyin",
+      "unicode": "f5d3",
+      "unicode_decimal": 62931
+    },
+    {
+      "icon_id": "22789733",
+      "name": "首页",
+      "font_class": "shouye1",
+      "unicode": "f811",
+      "unicode_decimal": 63505
+    },
+    {
+      "icon_id": "24296151",
+      "name": "交友",
+      "font_class": "jiaoyou",
+      "unicode": "fc19",
+      "unicode_decimal": 64537
+    },
+    {
+      "icon_id": "11372672",
+      "name": "卡包",
+      "font_class": "kabao",
+      "unicode": "e8b1",
+      "unicode_decimal": 59569
+    },
+    {
+      "icon_id": "11372737",
+      "name": "优惠券",
+      "font_class": "youhuiquan",
+      "unicode": "e8c0",
+      "unicode_decimal": 59584
+    },
+    {
+      "icon_id": "11372741",
+      "name": "娱乐宝",
+      "font_class": "yulebao",
+      "unicode": "e8c2",
+      "unicode_decimal": 59586
+    },
+    {
+      "icon_id": "11372771",
+      "name": "时间",
+      "font_class": "shijian",
+      "unicode": "e8c5",
+      "unicode_decimal": 59589
+    },
+    {
+      "icon_id": "11372774",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e8c6",
+      "unicode_decimal": 59590
+    },
+    {
+      "icon_id": "2674929",
+      "name": "箭头 下",
+      "font_class": "jiantouxia",
+      "unicode": "e62d",
+      "unicode_decimal": 58925
+    },
+    {
+      "icon_id": "8106289",
+      "name": "return",
+      "font_class": "return",
+      "unicode": "e6a4",
+      "unicode_decimal": 59044
+    },
+    {
+      "icon_id": "9215018",
+      "name": "搜索_line",
+      "font_class": "sousuo",
+      "unicode": "e87c",
+      "unicode_decimal": 59516
+    }
+  ]
+}

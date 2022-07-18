@@ -9,3 +9,13 @@ h1,h2,p{
   align-items: center;
   justify-content: center;
 }
+.baseColor{
+  color: rgb(0, 157, 255);
+
+}
+.yColor{
+  color: rgb(247, 198, 3);
+}
+.gColor{
+  color: rgb(138, 243, 176);
+}

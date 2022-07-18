@@ -28,8 +28,8 @@ export default {
   name: 'IndexPage',
   asyncData(context) {
     return {
-      me: 'hello nuxt',
-      baby: 'babyyeyey',
+      me: '豪仔',
+      baby: '如宝',
     }
   },
   data() {
