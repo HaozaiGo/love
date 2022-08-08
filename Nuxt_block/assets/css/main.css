@@ -9,6 +9,20 @@ h1,h2,p{
   align-items: center;
   justify-content: center;
 }
+.flex-sb{
+  display: flex;
+  justify-content: space-between;
+}
+.flex-sr{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.oneRow{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .baseColor{
   color: rgb(0, 157, 255);
 
