@@ -1,7 +1,7 @@
 <!--
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:08:41
- * @LastEditTime: 2022-04-21 16:06:14
+ * @LastEditTime: 2022-07-26 17:22:49
  * @FilePath: \Nuxt_block\pages\index.vue
 -->
 <template>
@@ -12,7 +12,7 @@
         <div class="name">
           <div class="flex">
             <div class="animate__animated animate__backInLeft">{{ me }}</div>
-            &&
+             <span style="color:red;margin: 0 10px;">❤</span> 
             <div class="animate__animated animate__backInRight">{{ baby }}</div>
           </div>
         </div>
