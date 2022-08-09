@@ -10,9 +10,9 @@
 
     </div>
     <div class="content">
-      <p class="title">--</p>
+      <p class="title">Just You </p>
       <p>不忘初心</p>
-      <i class="iconfont iconshouye baseColor" style="font-size:30px;position: absolute;right: 30px;top: 66px"> </i>
+      <i class="iconfont iconshouye baseColor" style="font-size:30px;position: absolute;right: 30px;top: 66px" @click="toHome"> </i>
 
       <div class="flex" style="justify-content: space-around;margin-top: 40px;">
         <div>
@@ -49,7 +49,12 @@
 
 <script>
 export default {
-  name:'MenuPage'
+  name:'MenuPage',
+  methods:{
+    toHome(){
+      this.$router.push('/')
+    }
+  }
 }
 </script>
 
@@ -72,14 +77,14 @@ export default {
     /* min-height: 60vh; */
   }
   .title{
-    font-size: 30px;
+    font-size: 26px;
   }
   .btn{
-    padding: 15px 40px;
+    padding: 10px 35px;
     background: #02a2f8;
     color: #ffffff;
     border: none;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 2px;
     border-radius: 6px;
     position: fixed;

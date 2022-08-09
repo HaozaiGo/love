@@ -12,7 +12,7 @@
         <div class="name">
           <div class="flex">
             <div class="animate__animated animate__backInLeft">{{ me }}</div>
-            &&
+            <span style="font-size:26px;margin:0 5px">❤️</span> 
             <div class="animate__animated animate__backInRight">{{ baby }}</div>
           </div>
         </div>
