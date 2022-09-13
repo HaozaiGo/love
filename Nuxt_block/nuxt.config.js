@@ -1,7 +1,7 @@
 /*
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:08:41
- * @LastEditTime: 2022-04-21 14:48:00
+ * @LastEditTime: 2022-09-13 15:08:38
  * @FilePath: \Nuxt_block\nuxt.config.js
  */
 export default {
@@ -28,7 +28,7 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [{src:"~/plugins/vconsole",ssr:false}],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
