@@ -1,6 +1,7 @@
 <!--
  * @Author: xiaoHao
 -->
+
 <template>
   <div class="content">
     <div  class="title">期待已久的事</div>
@@ -24,6 +25,20 @@ export default {
     return{
       rowList:[1,2],
     }
+  },
+  created(){
+    // console.log(this.$axios);
+    this.asyncData()
+  },
+  methods:{
+     asyncData(ctx) {
+      this.$axios.get('/user/list').then(res=>{
+        console.log(res);
+      })
+    // const data = await ctx.$axios.get('/user/list')
+    // console.log(data);
+
+},
   }
 }
 </script>

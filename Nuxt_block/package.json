@@ -12,10 +12,10 @@
     "lint": "npm run lint:js && npm run lint:prettier",
     "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
   },
-  "config":{
-    "nuxt":{
-      "host":"127.0.0.1",
-      "port":"1314"
+  "config": {
+    "nuxt": {
+      "host": "127.0.0.1",
+      "port": "1314"
     }
   },
   "dependencies": {
@@ -29,8 +29,10 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
+    "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/eslint-config": "^8.0.0",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@nuxtjs/proxy": "^2.1.0",
     "animate.css": "^4.1.1",
     "eslint": "^8.4.1",
     "eslint-config-prettier": "^8.3.0",

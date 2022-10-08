@@ -1,7 +1,7 @@
 /*
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:08:41
- * @LastEditTime: 2022-09-13 15:08:38
+ * @LastEditTime: 2022-10-08 16:38:57
  * @FilePath: \Nuxt_block\nuxt.config.js
  */
 export default {
@@ -40,7 +40,16 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@nuxtjs/axios'
+  ],
+  axios:{
+    baseURL:"http://localhost:3001/",
+    // proxy:true
+  },
+  proxy:{
+    // "/api":"http://localhost:3001"
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
@@ -57,5 +66,7 @@ export default {
     //   }
     // },
    
+      vendor: ["axios"]
+    
   },
 }
