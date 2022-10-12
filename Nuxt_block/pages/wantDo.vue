@@ -6,9 +6,10 @@
   <div class="content">
     <div  class="title">期待已久的事</div>
     <div v-for="(item,index) in rowList" :key="index" class="flex-sb rowSty">
+      <input :checked="item.selected" :value="item.selected"  name="123" type="radio"  @click="handleSelect(item)">
       <span style="margin-right:10px"><i class="iconfont iconbianji" style="font-size:26px"></i></span>
-      <span style="flex:1" class="oneRow">OverView 想do的事情1lakjsdflkjalsdjfkljas</span>
-      <span style="margin-left:10px"><i class="iconfont iconsuccess-filling" style="font-size:26px"></i></span>
+      <span style="flex:1" class="oneRow">{{item.Matter}}</span>
+      <span style="margin-left:10px"><i class="iconfont iconsuccess-filling" style="font-size:26px" :style="item.HadDone?'color:green':'none' "></i></span>
     </div>
 
     <div style=" position: fixed;bottom: 40px;text-align: center;width: 100vw;">
@@ -32,13 +33,25 @@ export default {
   },
   methods:{
      asyncData(ctx) {
-      this.$axios.get('/user/list').then(res=>{
-        console.log(res);
+      this.$axios.get('/matter/list').then(res=>{
+        
+        const arr =  res.data.data.list;
+        for (let i =0 ; i<arr.length;i++){
+          arr[i].selected = false;
+
+        }
+
+        this.rowList = arr;
+        console.log(this.rowList);
       })
-    // const data = await ctx.$axios.get('/user/list')
-    // console.log(data);
+ 
 
 },
+handleSelect(val){
+  console.log(val);
+  val.selected  = !val.selected
+
+}
   }
 }
 </script>

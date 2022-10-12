@@ -4,49 +4,18 @@
 package action
 
 import (
-	"fmt"
 	"strconv"
-	"time"
 
 	"github.com/gin-gonic/gin"
-	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"gorm.io/gorm/schema"
 
+	"myBack/src/config"
 	"myBack/src/middleware"
+	"myBack/src/service"
 )
 
-// const (
-// 	UserName = "root"
-// 	PassWord = "123456"
-// 	IP       = "127.0.0.1"
-// 	Port     = "3306"
-// 	dbName   = "loginmysql"
-// )
-
 func StartUp() {
-
-	dsn := "root:123456@tcp(127.0.0.1:3306)/golang_demo?charset=utf8mb4&parseTime=True&loc=Local"
-	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
-		// 表名和结构体同步 不加s
-		NamingStrategy: schema.NamingStrategy{
-			SingularTable: true,
-		},
-	})
-
-	fmt.Println(db)
-	fmt.Println(err)
-
-	sqlDB, err := db.DB()
-
-	// SetMaxIdleConns 设置空闲连接池中连接的最大数量
-	sqlDB.SetMaxIdleConns(10)
-
-	// SetMaxOpenConns 设置打开数据库连接的最大数量。
-	sqlDB.SetMaxOpenConns(100)
-
-	// SetConnMaxLifetime 设置了连接可复用的最大时间。
-	sqlDB.SetConnMaxLifetime(10 * time.Second)
+	var db = config.StartDb()
 
 	// 给结构体添加gorm.Model
 	type User struct {
@@ -70,6 +39,12 @@ func StartUp() {
 			"message": "pong",
 		})
 	})
+
+	// 新增期待事件
+	r.POST("/matter/add", service.AddMatter)
+
+	// 事件列表查询
+	r.GET("/matter/list", service.FindMatter)
 
 	// 增
 	r.POST("/user/add", func(ctx *gin.Context) {
