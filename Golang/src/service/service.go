@@ -61,3 +61,36 @@ func FindMatter(ctx *gin.Context) {
 	fmt.Println(res)
 
 }
+
+func DoneMatter(ctx *gin.Context) {
+	var data model.Thing
+
+	id := ctx.Param("id")
+	db.Select("id").Where("id = ?", id).Find(&data)
+
+	if data.ID == 0 {
+		ctx.JSON(200, gin.H{
+			"msg":  "用户id没找到",
+			"code": 500,
+		})
+	} else {
+		err := ctx.ShouldBindJSON(&data)
+
+		if err != nil {
+			ctx.JSON(200, gin.H{
+				"msg":  "修改失败",
+				"code": 500,
+			})
+		} else {
+
+		}
+
+		ctx.JSON(200, gin.H{
+			"code": 200,
+			"msg":  "修改成功",
+		})
+	}
+
+	fmt.Printf(id)
+
+}

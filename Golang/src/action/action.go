@@ -1,6 +1,9 @@
 /*
  * @Author: xiaoHao
  */
+/*
+ * @Author: xiaoHao
+ */
 package action
 
 import (
@@ -45,6 +48,9 @@ func StartUp() {
 
 	// 事件列表查询
 	r.GET("/matter/list", service.FindMatter)
+
+	// 事件列表完成
+	r.PUT("/matter/done/:id", service.DoneMatter)
 
 	// 增
 	r.POST("/user/add", func(ctx *gin.Context) {
