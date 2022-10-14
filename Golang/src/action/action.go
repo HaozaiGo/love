@@ -50,7 +50,7 @@ func StartUp() {
 	r.GET("/matter/list", service.FindMatter)
 
 	// 事件列表完成
-	r.PUT("/matter/done/:id", service.DoneMatter)
+	r.POST("/matter/done/:id", service.DoneMatter)
 
 	// 增
 	r.POST("/user/add", func(ctx *gin.Context) {

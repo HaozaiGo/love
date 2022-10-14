@@ -33,3 +33,18 @@ h1,h2,p{
 .gColor{
   color: rgb(138, 243, 176);
 }
+.autoCenter{
+  background: #ffffff;
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  color: #253035;
+  padding: 13px;
+  text-align: center;
+  border-radius: 10px;
+}

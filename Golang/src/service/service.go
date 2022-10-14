@@ -4,6 +4,9 @@
 /*
  * @Author: xiaoHao
  */
+/*
+ * @Author: xiaoHao
+ */
 package service
 
 import (
@@ -74,21 +77,13 @@ func DoneMatter(ctx *gin.Context) {
 			"code": 500,
 		})
 	} else {
-		err := ctx.ShouldBindJSON(&data)
-
-		if err != nil {
-			ctx.JSON(200, gin.H{
-				"msg":  "修改失败",
-				"code": 500,
-			})
-		} else {
-
-		}
-
+		db.Model(&data).Where("id = ?", id).Update("HadDone", true)
 		ctx.JSON(200, gin.H{
 			"code": 200,
 			"msg":  "修改成功",
+			"data": data,
 		})
+
 	}
 
 	fmt.Printf(id)

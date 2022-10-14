@@ -1,7 +1,7 @@
 <!--
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:51:40
- * @LastEditTime: 2022-08-08 17:26:43
+ * @LastEditTime: 2022-10-14 18:39:38
  * @FilePath: \Nuxt_block\pages\menu.vue
 -->
 <template>
@@ -10,7 +10,9 @@
 
     </div>
     <div class="content">
-      <p class="title">--</p>
+      <p class="title">
+        专属秘密空间
+      </p>
       <p>不忘初心</p>
       <i class="iconfont iconshouye baseColor" style="font-size:30px;position: absolute;right: 30px;top: 66px"> </i>
 
@@ -21,7 +23,7 @@
           <i class="iconfont iconmenu baseColor" style="font-size:26px"></i>
           <p style="font-size:13px">期待已久</p>
         </div>
-           <div>
+           <div @click="hand">
           <i class="iconfont iconfavorite-filling yColor" style="font-size:26px"></i>
           <p style="font-size:13px">美好时刻</p>
           </div>
@@ -82,7 +84,8 @@ export default {
     /* min-height: 60vh; */
   }
   .title{
-    font-size: 30px;
+    font-size: 22px;
+    color: #009dff;
   }
   .btn{
     padding: 15px 40px;

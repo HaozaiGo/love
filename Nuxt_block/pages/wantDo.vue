@@ -35,19 +35,48 @@
       <button class="buttomBtn" style="margin-right: 10vw" @click="handleDone">
         Done
       </button>
-      <button class="buttomBtn">Writing</button>
+      <button class="buttomBtn" @click="showWriting">Writing</button>
+
+
     </div>
+    <!-- write -->
+    <div v-show="showForm" class="form autoCenter" >
+      写下想做的事情:  <input type="text" v-model="wantDo" style="margin-left:5px;padding: 3px;" name="" />
+
+      <div style="text-align:center;margin-top: 20px;">
+        <button class="buttomBtn1" style="margin-right:20px" @click="matterAdd">
+        确认
+      </button>
+        
+      <button class="buttomBtn1"  @click="showForm = false">
+        取消
+      </button>
+      </div>
+  
+    </div>
+
+    <tips :showTips="showTips" :message="message"></tips>
+     
   </div>
 </template>
 
 <script>
+import tips from "@/component/showTips"
 export default {
+  components:{
+    tips
+  },
   data() {
     return {
       rowList: [1, 2],
       selected:"",
+      wantDo:"",
+      showTips:false,
+      showForm:false,
+      message:""
     }
   },
+ 
   created() {
     // console.log(this.$axios);
     this.asyncData()
@@ -71,22 +100,62 @@ export default {
    
     },
     handleDone(){
-      this.$axios.put(`/matter/done/${this.selected}`).then(res=>{
-        console.log(res);
+      this.$axios.post(`/matter/done/${this.selected}`).then(res=>{
+       
+        if(res.data.code === 200){
+          this.showTips = true;
+          this.asyncData()
+        }
+
       })
     },
+
+    matterAdd(){
+      if(this.wantDo){
+        this.$axios.post('/matter/add',{
+        Matter: this.wantDo,
+        HadDone: false,
+      }).then(res=>{
+        if(res.data.code === 200){
+          
+          this.message = "添加了一个新的事件";
+          this.showTips = true;
+          this.asyncData()
+          this.showForm = false;
+        }else{
+          
+          this.message = res.data.msg;
+          this.showTips = true;
+        }
+      })
+      }else{
+       
+        this.message = "添加失败！请检查添加内容";
+        this.showTips = true;
+      }
+   
+    },
+    showWriting(){
+      this.showForm = true;
+    }
     
   },
 }
 </script>
 
 <style scoped>
+
+.form{
+  padding: 20px;
+}
+
 .title {
   font-size: 18px;
   padding: 30px 20px;
   font-weight: bold;
 }
 .content {
+  
   background: #253035;
   min-height: 100vh;
   color: #ffffff;
@@ -97,6 +166,13 @@ export default {
 }
 .buttomBtn {
   padding: 12px 32px;
+  border: 2px solid #c1c1c1;
+  border-radius: 20px;
+  background: #253035;
+  color: #ffffff;
+}
+.buttomBtn1{
+  padding: 8px 30px;
   border: 2px solid #c1c1c1;
   border-radius: 20px;
   background: #253035;
