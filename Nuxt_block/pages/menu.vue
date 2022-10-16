@@ -1,7 +1,7 @@
 <!--
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:51:40
- * @LastEditTime: 2022-04-21 16:26:41
+ * @LastEditTime: 2022-08-08 17:26:43
  * @FilePath: \Nuxt_block\pages\menu.vue
 -->
 <template>
@@ -15,19 +15,21 @@
       <i class="iconfont iconshouye baseColor" style="font-size:30px;position: absolute;right: 30px;top: 66px" @click="toHome"> </i>
 
       <div class="flex" style="justify-content: space-around;margin-top: 40px;">
-        <div>
-          <i class="iconfont iconfavorite-filling yColor" style="font-size:26px"></i>
-          <p style="font-size:13px">收藏空间</p>
-        </div>
-        <div>
-          <i class="iconfont icondaichuli gColor" style="font-size:26px"></i>
-          <p style="font-size:13px">美好时刻</p>
-          </div>
-        <div>
+       
+       
+        <div @click="handleWantToDo">
           <i class="iconfont iconmenu baseColor" style="font-size:26px"></i>
           <p style="font-size:13px">期待已久</p>
-           
+        </div>
+           <div>
+          <i class="iconfont iconfavorite-filling yColor" style="font-size:26px"></i>
+          <p style="font-size:13px">美好时刻</p>
           </div>
+         <div @click="linkToTool">
+          <i class="iconfont iconbrowse gColor" style="font-size:26px"></i>
+          <p style="font-size:13px">实用工具</p>
+        </div>
+       
       </div>
 
       <div style="color:#9b9999">
@@ -51,8 +53,11 @@
 export default {
   name:'MenuPage',
   methods:{
-    toHome(){
-      this.$router.push('/')
+    handleWantToDo(){
+      this.$router.push('/wantDo')
+    },
+    linkToTool(){
+      this.$router.push('/otherTools')
     }
   }
 }

@@ -10,7 +10,14 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:js && npm run lint:prettier",
-    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
+    "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix",
+    "pm2": "pm2 start ./node_modules/nuxt-start/bin/nuxt-start.js --name Nuxt_block"
+  },
+  "config":{
+    "nuxt":{
+      "host":"127.0.0.1",
+      "port":"1314"
+    }
   },
   "dependencies": {
     "core-js": "^3.19.3",
