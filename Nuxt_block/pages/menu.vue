@@ -1,7 +1,7 @@
 <!--
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:51:40
- * @LastEditTime: 2022-10-14 18:39:38
+ * @LastEditTime: 2022-10-20 17:13:09
  * @FilePath: \Nuxt_block\pages\menu.vue
 -->
 <template>
@@ -23,7 +23,7 @@
           <i class="iconfont iconmenu baseColor" style="font-size:26px"></i>
           <p style="font-size:13px">期待已久</p>
         </div>
-           <div @click="hand">
+           <div @click="beautyTime" >
           <i class="iconfont iconfavorite-filling yColor" style="font-size:26px"></i>
           <p style="font-size:13px">美好时刻</p>
           </div>
@@ -60,6 +60,9 @@ export default {
     },
     linkToTool(){
       this.$router.push('/otherTools')
+    },
+    beautyTime(){
+      this.$router.push('/beautyTime')
     }
   }
 }

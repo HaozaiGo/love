@@ -1,12 +1,6 @@
 /*
  * @Author: xiaoHao
  */
-/*
- * @Author: xiaoHao
- */
-/*
- * @Author: xiaoHao
- */
 package service
 
 import (
