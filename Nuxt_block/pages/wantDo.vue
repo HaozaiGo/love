@@ -7,6 +7,13 @@
 
 <template>
   <div class="content">
+<<<<<<< HEAD
+    <div  class="title">期待已久的事</div>
+    <div v-for="(item,index) in rowList" :key="index" class="flex-sb rowSty">
+      <span style="margin-right:10px"><i class="iconfont iconbianji" style="font-size:26px"></i></span>
+      <span style="flex:1" class="oneRow">OverView 想do的事情1</span>
+      <span style="margin-left:10px"><i class="iconfont iconsuccess-filling" style="font-size:26px"></i></span>
+=======
     <div class="title">期待已久的事</div>
     <div v-for="(item, index) in rowList" :key="index" class="flex-sb rowSty">
       <input
@@ -27,6 +34,7 @@
           :style="item.HadDone ? 'color:green' : 'none'"
         ></i
       ></span>
+>>>>>>> bf5dd8fa3c2e63ea1725d516ede42dfd52c4f489
     </div>
 
     <div
