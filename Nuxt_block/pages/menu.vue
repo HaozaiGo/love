@@ -10,13 +10,9 @@
 
     </div>
     <div class="content">
-<<<<<<< HEAD
-      <p class="title">Just You </p>
-=======
       <p class="title">
         专属秘密空间
       </p>
->>>>>>> bf5dd8fa3c2e63ea1725d516ede42dfd52c4f489
       <p>不忘初心</p>
       <i class="iconfont iconshouye baseColor" style="font-size:30px;position: absolute;right: 30px;top: 66px" @click="toHome"> </i>
 
@@ -26,7 +22,7 @@
         <div @click="handleWantToDo">
           <i class="iconfont iconmenu baseColor" style="font-size:26px"></i>
           <p style="font-size:13px">期待已久</p>
-        </div>
+        </div>s
            <div @click="hand">
           <i class="iconfont iconfavorite-filling yColor" style="font-size:26px"></i>
           <p style="font-size:13px">美好时刻</p>
@@ -88,20 +84,8 @@ export default {
     /* min-height: 60vh; */
   }
   .title{
-<<<<<<< HEAD
-    font-size: 26px;
-=======
-    font-size: 22px;
-    color: #009dff;
->>>>>>> bf5dd8fa3c2e63ea1725d516ede42dfd52c4f489
-  }
-  .btn{
-    padding: 10px 35px;
-    background: #02a2f8;
-    color: #ffffff;
     border: none;
     font-size: 16px;
-    letter-spacing: 2px;
     border-radius: 6px;
     position: fixed;
     bottom: 20px;

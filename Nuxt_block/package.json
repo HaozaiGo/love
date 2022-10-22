@@ -19,12 +19,6 @@
       "port":"1314"
     }
   },
-  "config": {
-    "nuxt": {
-      "host": "127.0.0.1",
-      "port": "1314"
-    }
-  },
   "dependencies": {
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
