@@ -38,7 +38,7 @@
     </div>
     <!-- write -->
     <div v-show="showForm" class="form autoCenter" >
-      写下想做的事情:  <input type="text" v-model="wantDo" style="margin-left:5px;padding: 3px;" name="" />
+      写下想做的事情:  <input v-model="wantDo" type="text"  style="margin-left:5px;padding: 3px;" name="" />
 
       <div style="text-align:center;margin-top: 20px;">
         <button class="buttomBtn1" style="margin-right:20px" @click="matterAdd">
@@ -87,7 +87,7 @@ export default {
         }
 
         this.rowList = arr
-        console.log(this.rowList)
+       
       })
     },
     handleSelect(val) {

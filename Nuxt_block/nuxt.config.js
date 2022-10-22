@@ -1,7 +1,7 @@
 /*
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:08:41
- * @LastEditTime: 2022-10-08 16:38:57
+ * @LastEditTime: 2022-10-21 16:40:58
  * @FilePath: \Nuxt_block\nuxt.config.js
  */
 export default {
@@ -24,11 +24,14 @@ export default {
   css: [
     '@/assets/css/main.css',
     "animate.css",
-    "@/assets/font/iconfont.css"
+    "@/assets/font/iconfont.css",
+   
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    { src: '@/plugins/element-ui',}
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -65,7 +68,7 @@ export default {
     //     config.devtool = "#source-map"
     //   }
     // },
-   
+    transpile: [/^element-ui/], // 打包时不包含element-ui
       vendor: ["axios"]
     
   },
