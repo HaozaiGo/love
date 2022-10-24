@@ -1,7 +1,7 @@
 <!--
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:51:40
- * @LastEditTime: 2022-10-20 18:23:58
+ * @LastEditTime: 2022-10-24 10:37:18
  * @FilePath: \Nuxt_block\pages\menu.vue
 -->
 <template>
@@ -55,6 +55,10 @@
 export default {
   name:'MenuPage',
   methods:{
+
+    toHome(){
+      this.$router.push('/')
+    },
     handleWantToDo(){
       this.$router.push('/wantDo')
     },

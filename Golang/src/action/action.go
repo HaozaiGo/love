@@ -52,6 +52,9 @@ func StartUp() {
 	// 事件列表完成
 	r.POST("/matter/done/:id", service.DoneMatter)
 
+	// 上传美好时刻
+	r.POST("/upLoad/beauty", service.UploadApi)
+
 	// 增
 	r.POST("/user/add", func(ctx *gin.Context) {
 		var data User

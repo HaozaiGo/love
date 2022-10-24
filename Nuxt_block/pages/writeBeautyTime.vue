@@ -1,6 +1,9 @@
 <!--
  * @Author: xiaoHao
 -->
+<!--
+ * @Author: xiaoHao
+-->
 <template>
   <div class="content">
     <div class="flex-sb row">
@@ -65,6 +68,7 @@ export default {
         console.log(file.file);
         const form = new FormData();
         form.append("file", file.file);
+        this.$axios.post("/upLoad/beauty",form)
     }
   },
 }

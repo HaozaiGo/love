@@ -1,11 +1,15 @@
 /*
  * @Author: xiaoHao
  */
+/*
+ * @Author: xiaoHao
+ */
 package service
 
 import (
 	"fmt"
 	"myBack/src/config"
+	"path"
 
 	"myBack/src/model"
 
@@ -82,4 +86,26 @@ func DoneMatter(ctx *gin.Context) {
 
 	fmt.Printf(id)
 
+}
+
+func UploadApi(ctx *gin.Context) {
+	f, err := ctx.FormFile("file")
+	fmt.Println("filesize :=", f.Size)
+	if err != nil {
+		ctx.JSON(200, gin.H{
+			"message": "上传失败",
+		})
+	} else {
+		dst := path.Join("../static/", f.Filename)
+
+		fmt.Println("dst", dst)
+		// 保存文件
+		res := ctx.SaveUploadedFile(f, dst)
+		fmt.Println("res", res)
+		ctx.JSON(200, gin.H{
+			"msg":  "上传成功",
+			"name": f.Filename,
+			"size": f.Size,
+		})
+	}
 }
