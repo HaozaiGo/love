@@ -100,7 +100,6 @@ export default {
     color: #ffffff;
     border: none;
     font-size: 16px;
-    letter-spacing: 2px;
     border-radius: 6px;
     position: fixed;
     bottom: 20px;

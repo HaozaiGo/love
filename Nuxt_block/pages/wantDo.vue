@@ -1,9 +1,6 @@
 <!--
  * @Author: xiaoHao
 -->
-<!--
- * @Author: xiaoHao
--->
 
 <template>
   <div class="content">
