@@ -1,16 +1,13 @@
 <!--
  * @Author: xiaoHao
 -->
-<!--
- * @Author: xiaoHao
--->
 <template>
   <div>
     <div class="bg">
       <div class="top flex" @click="becomeHeight = false;">
         <div class="flex top_tip">
             <img src="@/static/img/beauty1.jpg" style="width:40px;height:40px;margin-right: 10px;"></img>
-            <div> 巴黎</div>
+            <div> {{title}}</div>
             <div><i class="iconfont iconfavorite" style="color:green"></i></div>
         </div>
 
@@ -25,15 +22,16 @@
   
   <div class="bottom_bg flex"  >
     <div class="tabs" @click="becomeHeight = true;" :style="becomeHeight?`height:70vh; transform:translateY(-160px)`:`height:44vh;transform:translateY(-50px)`">
-      <p style="font-size:18px;font-weight:bold;margin: 20px">相似景点</p>
-      <p style="margin-left:20px;margin-bottom: 10px;">西瓜系数据库来得及</p>
+      <p style="font-size:18px;font-weight:bold;margin: 20px">过往景点</p>
+      
       <!-- row -->
-      <div class="flex">
+      <div class="flex" style="justify-content:unset;margin-bottom:20px"  v-for="(item,index) in dataList" :key="index" @click="setTitle(item)">
         <img src="@/static/img/OIP-C.jpg" alt="" class="bottom_Img"></img>
         <div class="row_right">
-          <p>亚龙湾</p>
-          <div><img src="@/static/img/local.png" alt="" style="width:15px;height:15px"> 地点: 南海：三亚</div>
-          <p>评论:索拉卡进度款拉所经历的即可拉伸的了空间阿萨德</p>
+          <p style="margin-bottom: 5px;">时间：{{item.ActionTime}}</p>
+        
+          <div><img src="@/static/img/local.png" alt="" style="width:15px;height:15px"> 地点: {{item.Local}}</div>
+          <p>评论:{{item.Remark}}</p>
         </div>
 
 
@@ -52,9 +50,24 @@ export default {
   data(){
     return{
       becomeHeight:false,
+      dataList:[],
+      title:"巴黎",
     }
   },
+  created(){
+    this.getList()
+  },
   methods:{
+    setTitle(val){
+      console.log(val);
+      this.title = val.Local;
+    },
+    getList(){
+      this.$axios.get('/getBeautyTime').then(res=>{
+        this.dataList = res.data.data.list;
+        console.log(this.dataList);
+      })
+    },
     linkToWrite(){
       this.$router.push('/writeBeautyTime')
     }
@@ -105,6 +118,7 @@ export default {
   transform: translateY(-50px);
   border-radius: 20px;
   transition: all .5s;
+  overflow: scroll;
 }
 .bottom_Img{
   width:110px;

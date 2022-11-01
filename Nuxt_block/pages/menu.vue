@@ -1,7 +1,7 @@
 <!--
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:51:40
- * @LastEditTime: 2022-10-24 10:37:18
+ * @LastEditTime: 2022-11-01 15:57:53
  * @FilePath: \Nuxt_block\pages\menu.vue
 -->
 <template>
@@ -44,7 +44,7 @@
 
      
     </div>
-     <button class="btn">
+     <button class="btn" @click="wantToSay">
         想说的话
       </button>
   </div>
@@ -67,7 +67,10 @@ export default {
     },
     beautyTime(){
       this.$router.push('/beautyTime')
-    }
+    },
+    wantToSay(){
+      this.$router.push('/wantTosay')
+    },
   }
 }
 </script>

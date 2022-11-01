@@ -7,6 +7,7 @@
 package action
 
 import (
+	"net/http"
 	"strconv"
 
 	"github.com/gin-gonic/gin"
@@ -35,6 +36,9 @@ func StartUp() {
 	// 接口
 	r := gin.Default()
 
+	// 静态文件夹
+	r.StaticFS("/static", http.Dir("./static"))
+
 	r.Use(middleware.Cors())
 
 	r.GET("/", func(c *gin.Context) {
@@ -52,8 +56,17 @@ func StartUp() {
 	// 事件列表完成
 	r.POST("/matter/done/:id", service.DoneMatter)
 
-	// 上传美好时刻
+	// 上传美好时刻图片
 	r.POST("/upLoad/beauty", service.UploadApi)
+
+	// 上传美好时刻
+	r.POST("/beautyTime", service.UpLoadBeautyTime)
+	// 获取美好时刻
+	r.GET("/getBeautyTime", service.GetBeautyTimeList)
+
+	r.POST("/writeWantSay", service.WantToSay)
+
+	r.GET("/getSayList", service.GetSayInfo)
 
 	// 增
 	r.POST("/user/add", func(ctx *gin.Context) {

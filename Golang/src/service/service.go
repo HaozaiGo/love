@@ -18,6 +18,7 @@ import (
 
 var db = config.StartDb()
 
+// 添加事件
 func AddMatter(ctx *gin.Context) {
 	var data model.Thing
 
@@ -39,6 +40,7 @@ func AddMatter(ctx *gin.Context) {
 
 }
 
+// 查事件列
 func FindMatter(ctx *gin.Context) {
 	var dataList []model.Thing
 
@@ -63,6 +65,7 @@ func FindMatter(ctx *gin.Context) {
 
 }
 
+// 完成事件操作
 func DoneMatter(ctx *gin.Context) {
 	var data model.Thing
 
@@ -84,28 +87,118 @@ func DoneMatter(ctx *gin.Context) {
 
 	}
 
-	fmt.Printf(id)
+	fmt.Println(id)
 
 }
 
+// 上传图片
 func UploadApi(ctx *gin.Context) {
 	f, err := ctx.FormFile("file")
 	fmt.Println("filesize :=", f.Size)
 	if err != nil {
 		ctx.JSON(200, gin.H{
+			"code":    500,
 			"message": "上传失败",
 		})
 	} else {
-		dst := path.Join("../static/", f.Filename)
+		dst := path.Join("./static/", f.Filename)
 
 		fmt.Println("dst", dst)
 		// 保存文件
 		res := ctx.SaveUploadedFile(f, dst)
 		fmt.Println("res", res)
 		ctx.JSON(200, gin.H{
+			"code": 200,
 			"msg":  "上传成功",
 			"name": f.Filename,
 			"size": f.Size,
 		})
 	}
+}
+
+// 上传美好时刻
+func UpLoadBeautyTime(ctx *gin.Context) {
+	var data model.BeautyTime
+
+	db.AutoMigrate(&data)
+
+	err := ctx.ShouldBindJSON(&data)
+
+	if err != nil {
+		ctx.JSON(200, gin.H{
+			"msg":  "添加失败",
+			"code": 500,
+		})
+	} else {
+		db.Create(&data)
+
+		ctx.JSON(200, gin.H{
+			"msg":  "添加成功",
+			"code": 200,
+		})
+	}
+}
+
+func GetBeautyTimeList(ctx *gin.Context) {
+	var dataList []model.BeautyTime
+
+	res := db.Find(&dataList)
+
+	if res.RowsAffected == 0 {
+		ctx.JSON(200, gin.H{
+			"msg":  "没有查到数据",
+			"code": 400,
+			"data": gin.H{},
+		})
+	} else {
+		ctx.JSON(200, gin.H{
+			"msg":  "查询成功",
+			"code": 200,
+			"data": gin.H{
+				"list": dataList,
+			},
+		})
+	}
+}
+
+// 上传想说的话
+func WantToSay(ctx *gin.Context) {
+	var data model.TellMe
+	db.AutoMigrate(&data)
+	err := ctx.ShouldBindJSON(&data)
+	if err != nil {
+		ctx.JSON(200, gin.H{
+			"msg":  "添加失败",
+			"code": 500,
+		})
+	} else {
+		db.Create(&data)
+		ctx.JSON(200, gin.H{
+			"msg":  "添加成功",
+			"code": 200,
+		})
+	}
+}
+
+func GetSayInfo(ctx *gin.Context) {
+	var dataList []model.TellMe
+
+	res := db.Find(&dataList)
+
+	if res.RowsAffected == 0 {
+		ctx.JSON(200, gin.H{
+			"msg":  "没有查到数据",
+			"code": 400,
+			"data": gin.H{},
+		})
+	} else {
+		ctx.JSON(200, gin.H{
+			"msg":  "查询成功",
+			"code": 200,
+			"data": gin.H{
+				"list": dataList,
+			},
+		})
+	}
+
 }
