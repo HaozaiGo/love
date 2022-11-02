@@ -1,9 +1,12 @@
 <template>
   <div class="content">
     <div class="header"></div>
-    <div class="flex">
-        <img src="@/static/img/R-C.jpg" alt="" srcset="" style="width:40px;height:40px;border-radius: 50%;"></img>：
-        <p>123</p>
+    <div v-for="(item,index) in myGrilSayList" :key="index" class="flex" style="margin-top:8px" >
+      
+        <img v-if="item.MyGril" src="@/static/img/R-C.jpg" alt="" srcset="" style="width:40px;height:40px;border-radius: 50%;"></img>
+        <img v-if="!item.MyGril" src="@/static/img/me.png" alt="" style="width:40px;height:40px">：
+        <p>{{item.Msg}}</p>
+
     </div>
     
     <el-input
@@ -49,10 +52,12 @@ export default {
       identity: '',
 			myGril:false,
 			message:"",
+      myGrilSayList:[],
     }
   },
   methods: {
     handleSubmitSay() {
+      this.showTips = false;
 			this.$axios.post('/writeWantSay',{
 				MyGril:this.myGril,
 				Msg:this.textarea
@@ -68,16 +73,20 @@ export default {
       this.$router.push('/menu')
     },
     comfirmIdentity() {
+      this.showTips = false;
       if (!this.identity) {
 				this.showTips = true;
         this.message = '请输入身份'
 
       } 
 			if(myGril(this.identity)){
+        // mygril
 				this.myGril = true;
 				this.dialogVisible = false;
+        this.iSay()
 
 			}else if(this.identity === "小豪"||this.identity === "xiaohao"){
+        // 我自己登陆
 				this.myGril = false;
 				this.showTips = true;
         this.message = '欢迎豪哥';
@@ -96,10 +105,15 @@ export default {
     },
 
 		myGrilSay(){
-			this.$axios.get('/getSayList').then(res=>{
-
+			this.$axios.get('/getSayList', {params:{MyGril:this.myGril}}).then(res=>{
+        this.myGrilSayList = res.data.data.list
 			})
 		},
+    iSay(){
+      this.$axios.get('/getSayList',{params:{MyGril:this.myGril}}).then(res=>{
+        this.myGrilSayList = res.data.data.list
+			})
+    },
   },
 }
 </script>

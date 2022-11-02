@@ -1,7 +1,7 @@
 <!--
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:08:41
- * @LastEditTime: 2022-07-26 17:22:49
+ * @LastEditTime: 2022-11-02 16:43:56
  * @FilePath: \Nuxt_block\pages\index.vue
 -->
 <template>
@@ -10,7 +10,7 @@
       <div class="content" @click="routeLink">
         <!-- <img src="/img/index.jpg" alt="" srcset="" style="with:100vw;height:100vh"> -->
         <div class="name">
-          <div class="flex">
+          <div class="flex" style="justify-content:center">
             <div class="animate__animated animate__backInLeft">{{ me }}</div>
             <span style="font-size:26px;margin:0 5px">❤️</span> 
             <div class="animate__animated animate__backInRight">{{ baby }}</div>

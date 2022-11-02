@@ -10,6 +10,7 @@ import (
 	"fmt"
 	"myBack/src/config"
 	"path"
+	"strconv"
 
 	"myBack/src/model"
 
@@ -181,24 +182,50 @@ func WantToSay(ctx *gin.Context) {
 }
 
 func GetSayInfo(ctx *gin.Context) {
+	myGril, err := strconv.ParseBool(ctx.Query("MyGril"))
+	fmt.Println(myGril)
+	fmt.Println(err)
+
 	var dataList []model.TellMe
 
-	res := db.Find(&dataList)
+	if !myGril {
+		// 自己可看全部
+		res := db.Find(&dataList)
 
-	if res.RowsAffected == 0 {
-		ctx.JSON(200, gin.H{
-			"msg":  "没有查到数据",
-			"code": 400,
-			"data": gin.H{},
-		})
+		if res.RowsAffected == 0 {
+			ctx.JSON(200, gin.H{
+				"msg":  "没有查到数据",
+				"code": 400,
+				"data": gin.H{},
+			})
+		} else {
+			ctx.JSON(200, gin.H{
+				"msg":  "查询成功",
+				"code": 200,
+				"data": gin.H{
+					"list": dataList,
+				},
+			})
+		}
 	} else {
-		ctx.JSON(200, gin.H{
-			"msg":  "查询成功",
-			"code": 200,
-			"data": gin.H{
-				"list": dataList,
-			},
-		})
+		// myGril can see
+		res := db.Not("my_gril = ?", "1").Find(&dataList)
+
+		if res.RowsAffected == 0 {
+			ctx.JSON(200, gin.H{
+				"msg":  "没有查到数据",
+				"code": 400,
+				"data": gin.H{},
+			})
+		} else {
+			ctx.JSON(200, gin.H{
+				"msg":  "查询成功",
+				"code": 200,
+				"data": gin.H{
+					"list": dataList,
+				},
+			})
+		}
 	}
 
 }
