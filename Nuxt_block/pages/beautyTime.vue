@@ -2,9 +2,9 @@
  * @Author: xiaoHao
 -->
 <template>
-  <div>
+  <div style="height:100vh;overflow:hidden">
     <div class="bg">
-      <div class="top flex" @click="becomeHeight = false;">
+      <div class="top flex-c" @click="becomeHeight = false;">
         <div class="flex top_tip">
             <img src="@/static/img/beauty1.jpg" style="width:40px;height:40px;margin-right: 10px;"></img>
             <div> {{title}}</div>
@@ -20,13 +20,13 @@
   </div>
 
   
-  <div class="bottom_bg flex"  >
+  <div class="bottom_bg flex-c" >
     <div class="tabs" @click="becomeHeight = true;" :style="becomeHeight?`height:70vh; transform:translateY(-160px)`:`height:44vh;transform:translateY(-50px)`">
       <p style="font-size:18px;font-weight:bold;margin: 20px">过往景点</p>
       
       <!-- row -->
       <div class="flex" style="justify-content:unset;margin-bottom:20px"  v-for="(item,index) in dataList" :key="index" @click="setTitle(item)">
-        <img src="@/static/img/OIP-C.jpg" alt="" class="bottom_Img"></img>
+        <img :src="`http://127.0.0.1:3001/static/${item.Pic}`" alt="" class="bottom_Img"></img>
         <div class="row_right">
           <p style="margin-bottom: 5px;">时间：{{item.ActionTime}}</p>
         

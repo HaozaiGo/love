@@ -1,6 +1,7 @@
 /*
  * @Author: xiaoHao
  */
+
 package config
 
 import (
@@ -22,7 +23,7 @@ import (
 //
 // )
 func StartDb() *gorm.DB {
-	var dsn = "root:123456@tcp(127.0.0.1:3306)/golang_demo?charset=utf8mb4&parseTime=true&loc=Local"
+	var dsn = "root:12345678@tcp(127.0.0.1:3306)/golang_demo?charset=utf8mb4&parseTime=true&loc=Local"
 
 	db, err := gorm.Open(mysql.Open(dsn), &gorm.Config{
 		// 表名和结构体同步 不加s

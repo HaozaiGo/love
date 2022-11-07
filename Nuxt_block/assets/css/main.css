@@ -9,6 +9,10 @@ h1,h2,p{
   align-items: center;
  
 }
+.flex-c{
+  display: flex;
+  justify-content: center;
+}
 .flex-sb{
   display: flex;
   justify-content: space-between;
