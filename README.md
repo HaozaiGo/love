@@ -1,6 +1,8 @@
 <!--
  * @Author: xiaoHao
 -->
+
+Language: [English](README.md) | [中文简体](README-ZH.md)
 #  A website for my girlfriend (mobile)
 
 
@@ -9,6 +11,7 @@
 ![企业微信截图_20230423114151.png](https://s2.loli.net/2023/04/23/VWH58TwIOCMcKrf.png)
 
 1.1、index page
+
 ![Snipaste_2023-04-23_11-42-46.png](https://s2.loli.net/2023/04/23/x7NidlnMrFkaOUI.png)
 
 2、 implements a todoList
