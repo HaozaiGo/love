@@ -26,7 +26,7 @@
       
       <!-- row -->
       <div class="flex" style="justify-content:unset;margin-bottom:20px"  v-for="(item,index) in dataList" :key="index" @click="setTitle(item)">
-        <img :src="`http://127.0.0.1:3001/static/${item.Pic}`" alt="" class="bottom_Img"></img>
+        <img :src="`http://146.56.208.175:3001/static/${item.Pic}`" alt="" class="bottom_Img"></img>
         <div class="row_right">
           <p style="margin-bottom: 5px;">时间：{{item.ActionTime}}</p>
         

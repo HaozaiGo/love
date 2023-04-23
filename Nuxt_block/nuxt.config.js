@@ -1,7 +1,7 @@
 /*
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:08:41
- * @LastEditTime: 2022-11-07 18:39:19
+ * @LastEditTime: 2022-11-08 10:47:02
  * @FilePath: \Nuxt_block\nuxt.config.js
  */
 export default {
@@ -13,7 +13,7 @@ export default {
     },
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0' },
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],

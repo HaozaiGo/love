@@ -66,7 +66,8 @@ export default {
 					this.showTips = true;
 					this.message = "Love you！^. ^";
 					this.textarea = "";
-				 
+          this.myGrilSay();
+          this.iSay()
 			})
 		},
     routerBack() {
@@ -82,6 +83,8 @@ export default {
 			if(myGril(this.identity)){
         // mygril
 				this.myGril = true;
+        this.showTips = true;
+        this.message = '欢迎我的女孩';
 				this.dialogVisible = false;
         this.iSay()
 
@@ -121,6 +124,8 @@ export default {
 <style>
 .content {
   padding: 40px 30px;
+  height: calc(80vh - 150px);
+  overflow-y: auto;
 }
 .header {
   height: 25px;
