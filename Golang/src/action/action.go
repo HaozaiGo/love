@@ -56,6 +56,9 @@ func StartUp() {
 	// 事件列表完成
 	r.POST("/matter/done/:id", service.DoneMatter)
 
+	// 删除事件
+	r.DELETE("/matter/delete/:id", service.DeleteMatter)
+
 	// 上传美好时刻图片
 	r.POST("/upLoad/beauty", service.UploadApi)
 
@@ -63,7 +66,10 @@ func StartUp() {
 	r.POST("/beautyTime", service.UpLoadBeautyTime)
 	// 获取美好时刻
 	r.GET("/getBeautyTime", service.GetBeautyTimeList)
+	// 删除美好时刻
+	r.DELETE("/deleteBeautyTime/:id", service.DeleteBeautyTime)
 
+	// 想说的话
 	r.POST("/writeWantSay", service.WantToSay)
 
 	r.GET("/getSayList", service.GetSayInfo)

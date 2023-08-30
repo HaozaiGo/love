@@ -1,7 +1,7 @@
 /*
  * @Description: xiaoHao
  * @Date: 2022-04-19 11:08:41
- * @LastEditTime: 2022-11-08 10:47:02
+ * @LastEditTime: 2023-07-31 11:54:09
  * @FilePath: \Nuxt_block\nuxt.config.js
  */
 export default {
@@ -47,7 +47,8 @@ export default {
     '@nuxtjs/axios'
   ],
   axios:{
-    baseURL:"http://146.56.208.175:3001",
+    // baseURL:"http://146.56.208.175:3001",
+    baseURL:"http://localhost:3001",  //开发
     // proxy:true
   },
   proxy:{

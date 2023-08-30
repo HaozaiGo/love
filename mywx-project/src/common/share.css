@@ -1,0 +1,162 @@
+*,
+ ::before,
+ ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    margin: 0
+}
+
+page {
+    font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    background: transparent;
+    color: #000000;
+}
+
+input,
+textarea {
+    outline: none;
+    resize: none;
+}
+
+button {
+    outline: none;
+}
+
+
+/*for IE*/
+
+:focus {
+    outline: none;
+}
+
+
+/*for mozilla*/
+
+::-moz-focus-inner {
+    border-color: transparent;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+    max-width: 100%;
+}
+
+
+/* flex */
+
+.flex {
+    display: flex;
+}
+
+.flex-sb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-c {
+    display: flex;
+    align-items: center;
+}
+
+.flex-sr {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rel {
+    position: relative;
+}
+
+
+/* 水波纹 按钮 */
+
+.openIt {
+    color: #fff;
+    background: #29C3FF;
+    font-size: .19rem;
+    display: inline-block;
+    width: 50%;
+    transform: translate(50%);
+    text-align: center;
+    padding: 1.6vh 0px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.openIt::after {
+    content: '';
+    background: #90EE90;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-top: -100%;
+    margin-left: -20vw!important;
+    opacity: 0;
+    transition: all 1.2s;
+}
+
+.openIt:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+.ripple {
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.ripple::after {
+    content: '';
+    background: #90EE90;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-top: -100%;
+    margin-left: -20vw !important;
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.ripple:active::after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+}
+
+
+/* 字体单行显示 */
+
+.text-oneRow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+
+/* 多行显示 */
+
+.text-twoRow {
+    max-width: 40vw;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}

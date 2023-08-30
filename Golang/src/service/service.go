@@ -92,6 +92,29 @@ func DoneMatter(ctx *gin.Context) {
 
 }
 
+// 删除事件
+func DeleteMatter(ctx *gin.Context) {
+	var data model.Thing
+	id := ctx.Param("id")
+
+	db.Select("id").Where("id = ?", id).Find(&data)
+
+	if data.ID == 0 {
+		ctx.JSON(200, gin.H{
+			"msg":  "用户id没找到",
+			"code": 500,
+		})
+	} else {
+		db.Delete(&data)
+		ctx.JSON(200, gin.H{
+			"code": 200,
+			"msg":  "删除成功",
+			"data": data,
+		})
+	}
+
+}
+
 // 上传图片
 func UploadApi(ctx *gin.Context) {
 	f, err := ctx.FormFile("file")
@@ -158,6 +181,27 @@ func GetBeautyTimeList(ctx *gin.Context) {
 			"data": gin.H{
 				"list": dataList,
 			},
+		})
+	}
+}
+
+// DeleteBeautyTime 删除美好时刻
+func DeleteBeautyTime(ctx *gin.Context) {
+	var data model.BeautyTime
+	id := ctx.Param("id")
+	db.Select("id").Where("id = ?", id).Find(&data)
+
+	if data.ID == 0 {
+		ctx.JSON(200, gin.H{
+			"msg":  "用户id没找到",
+			"code": 500,
+		})
+	} else {
+		db.Delete(&data)
+		ctx.JSON(200, gin.H{
+			"code": 200,
+			"msg":  "删除成功",
+			"data": data,
 		})
 	}
 }
