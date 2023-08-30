@@ -1,0 +1,102 @@
+
+.page.data-v-57280228 {
+  background-color: #ffffff;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+.group.data-v-57280228 {
+  padding: 18rpx 38rpx 44rpx;
+  overflow-y: auto;
+}
+.image_4.data-v-57280228 {
+  border-radius: 16rpx;
+  width: 670rpx;
+  height: 300rpx;
+}
+.equal-division.data-v-57280228 {
+  margin-top: 54rpx;
+}
+.group_2.data-v-57280228 {
+  flex: 1 1 168rpx;
+}
+.equal-division-item.data-v-57280228 {
+  padding: 8rpx 0;
+}
+.space-y-6 > view.data-v-57280228:not(:first-child),
+.space-y-6 > text.data-v-57280228:not(:first-child),
+.space-y-6 > image.data-v-57280228:not(:first-child) {
+  margin-top: 12rpx;
+}
+.image_5.data-v-57280228 {
+  border-radius: 50%;
+  width: 96rpx;
+  height: 96rpx;
+}
+.font_1.data-v-57280228 {
+  font-size: 26rpx;
+  font-family: 'PingFangSC-Regular';
+  line-height: 36rpx;
+  color: #000000;
+}
+.group_3.data-v-57280228 {
+  margin-top: 46rpx;
+}
+.text_3.data-v-57280228 {
+  color: #000000;
+  font-size: 30rpx;
+  font-family: 'PingFangSC-Semibold';
+  font-weight: 600;
+  line-height: 42rpx;
+}
+.group_4.data-v-57280228 {
+  padding: 24rpx 0 32rpx;
+}
+.image_6.data-v-57280228 {
+  border-radius: 8rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.space-y-29 > view.data-v-57280228:not(:first-child),
+.space-y-29 > text.data-v-57280228:not(:first-child),
+.space-y-29 > image.data-v-57280228:not(:first-child) {
+  margin-top: 58rpx;
+}
+.space-y-8 > view.data-v-57280228:not(:first-child),
+.space-y-8 > text.data-v-57280228:not(:first-child),
+.space-y-8 > image.data-v-57280228:not(:first-child) {
+  margin-top: 16rpx;
+}
+.font_2.data-v-57280228 {
+  font-size: 30rpx;
+  font-family: 'PingFangSC-Regular';
+  line-height: 42rpx;
+  color: #000000;
+}
+.font_3.data-v-57280228 {
+  font-size: 26rpx;
+  font-family: 'PingFangSC-Regular';
+  line-height: 36rpx;
+  color: #888888;
+}
+.space-x-3-reverse > view.data-v-57280228:not(:last-child),
+.space-x-3-reverse > text.data-v-57280228:not(:last-child),
+.space-x-3-reverse > image.data-v-57280228:not(:last-child) {
+  margin-right: 6rpx;
+}
+.font_4.data-v-57280228 {
+  font-size: 34rpx;
+  font-family: 'PingFangSC-Regular';
+  line-height: 48rpx;
+  color: #000000;
+}
+.list-item.data-v-57280228:not(:last-of-type) {
+  border-bottom: solid 2rpx #dddddd;
+}
+.space-x-16 > view.data-v-57280228:not(:first-child),
+.space-x-16 > text.data-v-57280228:not(:first-child),
+.space-x-16 > image.data-v-57280228:not(:first-child) {
+  margin-left: 32rpx;
+}
+

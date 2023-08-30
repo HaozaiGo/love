@@ -1,0 +1,164 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*每个页面公共css */
+/* global CSS */
+page{
+	font-size: 28rpx;
+}
+.abs{
+	position: absolute;
+}
+.rel{
+	position: relative;
+}
+.flex{
+	display: flex;
+	align-items: center;
+}
+.flex-sb{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.flex-sr{
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.oneRow{
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.my_content{
+	padding: 20rpx 30rpx;
+	position: relative;
+}
+.my_content_New{
+	height: 100vh;
+	overflow: hidden;
+}
+/* 底部公共按钮 */
+.bootomUserBtn {
+		position: fixed;
+		bottom: 30rpx;
+		width: calc(100% - 56rpx) ;
+		background: rgba(74,144,226,1);
+		color: #FFFFFF;
+		font-size: 28rpx;
+		border-radius: 20px;
+		margin-top: 20px;
+}
+/* 空背景 */
+.enptyBg{
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		height: -webkit-fit-content;
+		height: fit-content;
+}
+view,
+  image,
+  text {
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+#app {
+    width: 100vw;
+    height: 100vh;
+}
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.justify-start {
+    justify-content: flex-start;
+}
+.justify-end {
+    justify-content: flex-end;
+}
+.justify-center {
+    justify-content: center;
+}
+.justify-between {
+    justify-content: space-between;
+}
+.justify-around {
+    justify-content: space-around;
+}
+.justify-evenly {
+    justify-content: space-evenly;
+}
+.items-start {
+    align-items: flex-start;
+}
+.items-end {
+    align-items: flex-end;
+}
+.items-center {
+    align-items: center;
+}
+.items-baseline {
+    align-items: baseline;
+}
+.items-stretch {
+    align-items: stretch;
+}
+.self-start {
+    align-self: flex-start;
+}
+.self-end {
+    align-self: flex-end;
+}
+.self-center {
+    align-self: center;
+}
+.self-baseline {
+    align-self: baseline;
+}
+.self-stretch {
+    align-self: stretch;
+}
+.flex-1 {
+    flex: 1 1 0%;
+}
+.flex-auto {
+    flex: 1 1 auto;
+}
+.grow {
+    flex-grow: 1;
+}
+.grow-0 {
+    flex-grow: 0;
+}
+.shrink {
+    flex-shrink: 1;
+}
+.shrink-0 {
+    flex-shrink: 0;
+}
+.relative {
+    position: relative;
+}
+
