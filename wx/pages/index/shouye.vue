@@ -9,34 +9,34 @@
         <view class="flex-col items-center group_2 equal-division-item space-y-6">
           <image
             class="image_5"
-            src="../../static/images/Home/fish.png"
+            src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6177b0ffe4f145001134c2f1/6177b0ffe4f145001134c2f2/45b4e7289b37f56154aab442fbe878ec.png"
           />
-          <text class="font_1">小型鱼类</text>
+          <text class="font_1">地图找楼</text>
         </view>
         <view class="flex-col items-center group_2 equal-division-item space-y-6">
           <image
             class="image_5"
-            src="../../static/images/Home/shark.png"
+            src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6177b0ffe4f145001134c2f1/6177b0ffe4f145001134c2f2/0bd0bb4d36b778f945c84563de6d2356.png"
           />
-          <text class="font_1">大型鱼类</text>
+          <text class="font_1">核心商圈</text>
         </view>
         <view class="flex-col items-center group_2 equal-division-item space-y-6">
           <image
             class="image_5"
-            src="../../static/images/Home/coral.png"
+            src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6177b0ffe4f145001134c2f1/6177b0ffe4f145001134c2f2/e6ff79d6a0b9e960c7df41eb76f37229.png"
           />
-          <text class="font_1">珊瑚</text>
+          <text class="font_1">全景参观</text>
         </view>
         <view class="flex-col items-center group_2 equal-division-item space-y-6">
           <image
             class="image_5"
-            src="../../static/images/Home/crab.png"
+            src="https://codefun-proj-user-res-1256085488.cos.ap-guangzhou.myqcloud.com/6177b0ffe4f145001134c2f1/6177b0ffe4f145001134c2f2/84c3c23951d803da5d922ec1f5fb4442.png"
           />
-          <text class="font_1">无脊椎动物</text>
+          <text class="font_1">咨询热线</text>
         </view>
       </view>
       <view class="flex-col group_3">
-        <text class="self-start text_3">即时秒杀</text>
+        <text class="self-start text_3">热推空间</text>
         <view class="flex-col">
           <view class="flex-row group_4 list-item space-x-16" v-for="(item, index) in items" :key="index">
             <image
